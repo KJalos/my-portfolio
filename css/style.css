@@ -1,0 +1,270 @@
+:root {
+    /* Color palette 1 */
+    --color-black:#000;
+    --color-navy:#150050;
+    --color-purple-dark:#3F0071;
+    --color-purple:#610094;
+    --color-white:#fff;
+
+    /* color palette 2 *//*https://colorhunt.co/palette/2f86a634be822fdd92f2f013*/
+    --color-teal:#2F86A6;
+    --color-green:#34BE82;
+    --color-green-light:#2FDD92;
+    --color-green-gradient:linear-gradient(45deg,var(--color-green),var(--color-green-light));
+    --color-yellow:#F2F013;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Layout */
+    margin:0;
+    padding: 0;
+    /* Appearannce and Typography */
+    background-color: var(--color-teal);
+    color:var(--color-white);
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.top-container {
+    /* Layout */
+    position: relative;
+    /* Appearance and Typography */
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.nav {
+    /* Layout */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Appearance and Typography */
+    background-color:var(--color-green);
+    height: 64px;
+    width: 100%;
+    box-shadow: 1px 1px 5px 0px var(--color-navy);
+}
+
+.nav ul {
+    /* Layout */
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    margin: 0;
+    /* Appearance and Typography */
+    list-style: none;
+    height: 100%;
+}
+
+.nav .nav-link {
+    /* Layout */
+    display: inline-block;
+    /* Appearance and Typography */
+    color:white;
+    font-weight: bold;
+    height: 100%;
+    letter-spacing: .15em;
+    padding: 1em 2em;
+    text-decoration: none;
+   
+}
+
+.nav .nav-link:hover {
+    background-color: var(--color-navy);
+    border-radius: 2px;
+}
+
+.welcome {
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Appearance and Typography */
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg,#222,#111);
+    text-align: center;
+    letter-spacing: .15em;
+}
+
+.welcome-text p {
+    color: var(--color-green);
+}
+
+.main-container {
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+hr {
+    border: none;
+    border-top-style: dotted;
+    width: 5%;
+    border-width: .5em;
+    margin: 2em auto;
+}
+
+.projects,.skills {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);  */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-content: space-evenly;
+}
+
+.project-tile,.skill {
+    margin-bottom: 1em;
+    background-color: var(--color-green);
+    width: 300px;
+    max-width: 100%;
+    /* border: 3px solid var(--color-black); */
+    border-top-left-radius: 16px;
+    padding: .5em;
+    color: var(--color-black);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    box-shadow: 2px 2px 5px var(--color-black);
+}
+
+.skills-container {
+    margin:0 auto;
+    width: 100%;
+}
+
+.skills{
+    margin: 0 auto;
+}
+
+.skill {
+    border-radius: 16px;
+    width: 200px;
+    margin: 1em;
+}
+
+.skill img {
+    margin: auto;
+    height: 60%;
+}
+
+.project:hover {
+    box-shadow: 2px 2px 5px var(--color-white);
+    transform: scale(101%);
+}
+
+.coming-soon {
+    background-color: gray;
+    cursor: default;
+}
+
+.coming-soon:hover {
+    box-shadow: 2px 2px 5px var(--color-black);
+}
+
+.project-tile img,.skill img {
+    max-width: 100%;
+}
+
+.project-tile a {
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.projects-title {
+    /* Layout */
+    display: inline-block;
+    margin-bottom: 1em;
+    /* Appearance and Typography */
+}
+
+footer {
+    background-color: var(--color-green-light);
+    margin: 0;
+   text-align: right;
+    height: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.contact-details i {
+    margin: 0 1em;
+    margin-bottom: 1em;
+}
+
+.contact-me form,.form-element {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1em;
+}
+
+.contact-me form {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    max-width: 100%;
+}
+
+.contact-me textarea{
+    resize: none;
+}
+
+.contact-me [type="submit"] {
+    background-color: var(--color-green-light);
+    border: none;
+    color: var(--color-black);
+    font-size: inherit;
+    font-weight: bold;
+    transition: background-color .7s;
+    padding: .5em 0;
+}
+
+.contact-me [type="submit"]:hover {
+    background-color: var(--color-green);
+}
+
+#about-me,#projects-section,#skills,#contact-me {
+    /* to fix navigation */
+    padding-top:3em;
+    margin-top: -3em;
+}
+
+@media (max-width:675px){
+    .nav ul {
+        /* Layout */
+        flex-direction: column;
+        /* Appearance and Typography */
+        list-style: none;
+        height: 100%;
+        padding: 0;
+    }
+    .nav {
+        height: auto;
+        position: absolute;
+    }
+
+    .coming-soon {
+        display: none;
+    }
+
+    .main-container {
+        margin: 0 auto;
+    }
+}
